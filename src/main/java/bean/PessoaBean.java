@@ -9,7 +9,6 @@ import entidade.Pessoa;
 public class PessoaBean {
 
 	private Pessoa pessoa = new Pessoa();
-	private List<Pessoa> pessoas;
 
 	public String salvar() {
 		Banco.salvar(pessoa);
