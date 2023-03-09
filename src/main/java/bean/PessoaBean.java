@@ -15,7 +15,6 @@ public class PessoaBean {
 
 	public String salvar() {
 		Banco.salvar(pessoa);
-		pessoas = Banco.select();
 		pessoa = new Pessoa();
 		return null;
 	}
@@ -29,6 +28,9 @@ public class PessoaBean {
 	}
 
 	public List<Pessoa> getPessoas() {
+		 if(pessoa != null) {
+	         pessoas = Banco.select();
+	      } 
 		return pessoas;
 	}
 
