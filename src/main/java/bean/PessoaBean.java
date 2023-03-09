@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 
 import bd.Banco;
@@ -9,9 +11,11 @@ import entidade.Pessoa;
 public class PessoaBean {
 
 	private Pessoa pessoa = new Pessoa();
+	private List<Pessoa> pessoas;
 
 	public String salvar() {
 		Banco.salvar(pessoa);
+		pessoas = Banco.select();
 		pessoa = new Pessoa();
 		return null;
 	}
@@ -22,5 +26,13 @@ public class PessoaBean {
 
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
+	}
+
+	public List<Pessoa> getPessoas() {
+		return pessoas;
+	}
+
+	public void setPessoas(List<Pessoa> pessoas) {
+		this.pessoas = pessoas;
 	}	
 }
