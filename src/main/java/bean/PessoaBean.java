@@ -15,7 +15,7 @@ public class PessoaBean {
 
 	public String salvar() {
 		Banco.salvar(pessoa);
-		pessoa = new Pessoa();
+		
 		return null;
 	}
 	

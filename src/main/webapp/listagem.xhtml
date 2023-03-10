@@ -13,21 +13,19 @@
 
 <h:body>
 	<h:form>
-		<h:panelGrid columns="3">
-			<p:dataTable value="#{pessoaBean.pessoas}" var="p">
-				<p:column>
-					<p:outputLabel value="#{p.nome}" />
-				</p:column>
-				
-				<p:column>
-					<p:outputLabel value="#{p.dataNascimento}" />
-				</p:column>
-				
-				<p:column>
-					<p:outputLabel value="#{p.idade}" />
-				</p:column>
-			</p:dataTable>
+		<h:panelGrid columns="3">			
 			
+			<h:dataTable value="#{pessoaBean.pessoas}" var="p">
+				<h:column>
+					<h:outputText value="#{p.nome}" />
+				</h:column>
+				<h:column>
+					<h:outputText value="#{p.dataNascimento}" />
+				</h:column>
+				<h:column>
+					<h:outputText value="#{p.idade}" />
+				</h:column>
+			</h:dataTable>
 		</h:panelGrid>
 
 		<h:link value="Pagina Inicial" outcome="index.xhtml" />

@@ -16,13 +16,13 @@
 				<p:inputText value="#{pessoaBean.pessoa.nome}"/>
 				
 				<h:outputText value="DataNascimento"/>
-				<p:datePicker valeu="#{pessoaBean.pessoa.dataNascimento}"/>
+				<p:datePicker value="#{pessoaBean.pessoa.dataNascimento}"/>
 								
 				<h:outputText value="Idade"/>
 				<p:spinner value="#{pessoaBean.pessoa.idade}"/>
-				
+								
 				<h:commandButton value="Salvar" action="#{pessoaBean.salvar}"/>
-				
+							
 			</h:panelGrid>
 			
 			<h:link value="Listagem" outcome="listagem.xhtml" />
