@@ -1,11 +1,11 @@
 package entidade;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Pessoa {
 	
 	private String nome;
-	private Date dataNascimento;
+	private LocalDate dataNascimento;
 	private Integer idade;
 	
 	
@@ -15,12 +15,14 @@ public class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Date getDataNascimento() {
+	
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
+
 	public Integer getIdade() {
 		return idade;
 	}
